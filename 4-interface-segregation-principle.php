@@ -77,7 +77,7 @@ class Programmer implements Codeable, Testable
     }
 }
 
-class Tester implements Workable
+class Tester implements Testable
 {
     public function test()
     {
