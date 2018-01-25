@@ -3,6 +3,7 @@
 // Interface Segregation Principle Violation
 interface Workable
 {
+    public function canCode();
     public function code();
     public function test();
 }
