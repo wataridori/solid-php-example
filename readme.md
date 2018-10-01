@@ -17,7 +17,7 @@ This principle is about **business logic to clients communication**.
 > Many client-specific interfaces are better than one general-purpose interface.
 
 ### Dependency Inversion Principle ([Example](./5-dependency-inversion-principle.php))
-> This principle wires up all **other four principles in a single circle**.
-Depend upon abstractions. Do not depend upon concretions.
+This principle wires up all **other four principles in a single circle**.
+> Depend upon abstractions. Do not depend upon concretions.
 
 #### For more information about *Object Oriented Design Principles*, you can refer [this slide](https://viblo.asia/thangtd90/posts/pVYRPJPmG4ng)
