@@ -49,7 +49,7 @@ class ProjectManagement
     public function processCode(Workable $member)
     {
         if ($member->canCode()) {
-            $member->code();
+            return $member->code();
         }
     }
 }
@@ -90,6 +90,6 @@ class ProjectManagement
 {
     public function processCode(Codeable $member)
     {
-        $member->code();
+        return $member->code();
     }
 }
