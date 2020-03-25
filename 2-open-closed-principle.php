@@ -22,9 +22,9 @@ class ProjectManagement
     public function process($member)
     {
         if ($member instanceof Programmer) {
-            $member->code();
+            return $member->code();
         } elseif ($member instanceof Tester) {
-            $member->test();
+            return $member->test();
         };
 
         throw new Exception('Invalid input member');
