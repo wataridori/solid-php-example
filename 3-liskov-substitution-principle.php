@@ -1,20 +1,14 @@
 <?php
 
 // Liskov Substitution Principle Violation
-// The Rectangle - Square problem
 class Rectangle
 {
-    protected $width;
-    protected $height;
+    public $width;
+    public $height;
 
     public function setHeight($height)
     {
         $this->height = $height;
-    }
-
-    public function getHeight()
-    {
-        return $this->height;
     }
 
     public function setWidth($width)
@@ -22,14 +16,9 @@ class Rectangle
         $this->width = $width;
     }
 
-    public function getWidth()
-    {
-        return $this->width;
-    }
-
     public function area()
     {
-         return $this->height * $this->width;
+        return $this->height * $this->width;
     }
 }
 
@@ -48,19 +37,44 @@ class Square extends Rectangle
     }
 }
 
-class RectangleTest
+
+// Refactored
+interface Shape
 {
-    private $rectangle;
+    public function area();
+}
 
-    public function __construct(Rectangle $rectangle)
+class Rectangle implements Shape {
+
+    public $width;
+    public $height;
+
+    public function setHeight($height)
     {
-        $this->rectangle = $rectangle;
+        $this->height = $height;
     }
 
-    public function testArea()
+    public function setWidth($width)
     {
-        $this->rectangle->setHeight(2);
-        $this->rectangle->setWidth(3);
-        // Expect rectangle's area to be 6
+        $this->width = $width;
     }
+
+    public function area() {
+        return $this->height * $this->width;
+    }
+
+}
+
+class Square implements Shape {
+
+    public $size;
+
+    public function setSize($height) {
+        $this->size = $size;
+    }
+
+    public function area() {
+        return $this->size * $this->size;
+    }
+
 }
