@@ -1,5 +1,5 @@
 ## SOLID Principles Examples in PHP
-
+## every principle has it's own file
 ### Single Responsibility Principle ([Example](./1-single-responsibility-principle.php))
 This principle is about **actors and high level architecture**.
 > A class should have one, and only one, reason to change.
